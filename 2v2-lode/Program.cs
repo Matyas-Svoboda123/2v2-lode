@@ -69,7 +69,7 @@
         {
             Console.Clear();
             Console.WriteLine("=== PRAVIDLA ===");
-            Console.WriteLine("Každý tým má svou hrací plochu.");
+            Console.WriteLine("Každý hráč má svou hrací plochu.");
             Console.WriteLine("Hráči se střídají v hádání pozic nepřátelských lodí.");
             Console.WriteLine("Cíl: potopit všechny lodě soupeře.");
             Console.WriteLine("\nStiskni libovolnou klávesu pro návrat...");
