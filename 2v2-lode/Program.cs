@@ -13,7 +13,6 @@
                 Console.WriteLine("=================================");
                 Console.WriteLine("1) Nová hra");
                 Console.WriteLine("2) Pravidla");
-                Console.WriteLine("3) Nastavení");
                 Console.WriteLine("0) Konec");
                 Console.WriteLine("=================================");
                 Console.Write("Zadej volbu: ");
@@ -28,9 +27,6 @@
                         break;
                     case 2:
                         Pravidla();
-                        break;
-                    case 3:
-                        Nastaveni();
                         break;
                     case 0:
                         Console.WriteLine("Ukončuji hru...");
@@ -73,40 +69,10 @@
             Console.WriteLine("=== PRAVIDLA ===");
             Console.WriteLine("Každý hráč má svou hrací plochu.");
             Console.WriteLine("Hráči se střídají v hádání pozic nepřátelských lodí.");
+            Console.WriteLine("Když hráč nemá spolu hráče tak bude hrát za něj.");
             Console.WriteLine("Cíl: potopit všechny lodě soupeře.");
             Console.WriteLine("\nStiskni libovolnou klávesu pro návrat...");
             Console.ReadKey();
         }
 
-        static void Nastaveni()
-        {
-            Console.Clear();
-            Console.WriteLine("=== NASTAVENÍ ===");
-            Console.WriteLine("1) Velikost hrací plochy");
-            Console.WriteLine("2) Počet lodí");
-            Console.WriteLine("0) Zpět");
-
-            Console.Write("\nZadej volbu: ");
-            string volba = Console.ReadLine();
-
-            switch (volba)
-            {
-                case "1":
-                    Console.Write("Zadej velikost hrací plochy (např. 10): ");
-                    string velikost = Console.ReadLine();
-                    Console.WriteLine($"Velikost nastavena na {velikost}x{velikost}.");
-                    break;
-
-                case "2":
-                    Console.Write("Zadej počet lodí: ");
-                    string lode = Console.ReadLine();
-                    Console.WriteLine($"Počet lodí nastaven na {lode}.");
-                    break;
-
-                case "0":
-                    return;
-            }
-
-            Console.WriteLine("\nStiskni libovolnou klávesu pro návrat...");
-            Console.ReadKey();
-        }
+       
