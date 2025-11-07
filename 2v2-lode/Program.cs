@@ -1,4 +1,6 @@
-﻿        MainMenu();
+﻿        using System;
+
+        MainMenu();
         static void MainMenu()
         {
             int volba = -1;
