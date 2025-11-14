@@ -13,7 +13,7 @@
                 Console.WriteLine("=================================");
                 Console.WriteLine("1) Nová hra");
                 Console.WriteLine("2) Pravidla");
-                Console.WriteLine("0) Konec");
+                Console.WriteLine("3) Konec");
                 Console.WriteLine("=================================");
                 Console.Write("Zadej volbu: ");
 
@@ -28,7 +28,7 @@
                     case 2:
                         Pravidla();
                         break;
-                    case 0:
+                    case 3:
                         Console.WriteLine("Ukončuji hru...");
                         break;
                     default:
