@@ -1,4 +1,5 @@
 ﻿        using System;
+        using _2v2_lode;
 
         MainMenu();
         static void MainMenu()
@@ -47,8 +48,11 @@
 
             Console.Write("Tým 1 - Hráč 1: ");
             string t1p1 = Console.ReadLine();
-
+            char[,] t1a1=new char[10, 10];
+            HraciPole t1h1 = new HraciPole(t1a1);
+            t1h1.NaplnPole();
             Console.Write("Tým 1 - Hráč 2: ");
+                
             string t1p2 = Console.ReadLine();
 
             Console.Write("Tým 2 - Hráč 1: ");
@@ -56,7 +60,7 @@
 
             Console.Write("Tým 2 - Hráč 2: ");
             string t2p2 = Console.ReadLine();
-
+            
             Console.WriteLine($"\nTýmy připraveny!");
             Console.WriteLine($"{t1p1} a {t1p2}  VS  {t2p1} a {t2p2}");
             Console.WriteLine("\nStiskni libovolnou klávesu pro návrat do menu...");
