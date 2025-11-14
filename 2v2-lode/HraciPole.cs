@@ -185,7 +185,6 @@ public class HraciPole
         VypisPole(); // Zobrazíme pole před střelou
 
         Console.Write("Zadej X souřadnici (0 - " + (pole.GetLength(0) - 1) + "): ");
-        // POZOR: Ponecháno int.Parse() bez try/catch, jak bylo v původním kódu
         int x = int.Parse(Console.ReadLine());
 
         Console.Write("Zadej Y souřadnici (0 - " + (pole.GetLength(1) - 1) + "): ");
