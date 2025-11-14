@@ -177,6 +177,7 @@ public class HraciPole
             }
         }
     }
+    
     public void Strilej()
     {
         Console.Clear();
@@ -191,7 +192,6 @@ public class HraciPole
         int y = int.Parse(Console.ReadLine());
         
         // Jednoduchá kontrola mezí (bez return false v if)
-        // ReSharper disable once ReplaceWithSingleAssignment.True
         bool vMezich = true;
         if (x < 0) vMezich = false;
         if (x >= pole.GetLength(0)) vMezich = false;
