@@ -45,21 +45,33 @@
             Console.Clear();
             Console.WriteLine("=== NOVÁ HRA 2v2 ===");
             Console.WriteLine("Zadejte jména hráčů:");
+                Console.Write("Tým  - Hráč 1: ");
+                string t1p1 = Console.ReadLine();
+                Console.WriteLine("Tady je tvé hrací pole naplň si ho");
+                Console.ReadKey();
+                HraciPole h1 = new HraciPole();
+                h1.NaplnPole();
+            
+                Console.Write("Tým 1 - Hráč 2: ");
+                string t1p2 = Console.ReadLine();
+                Console.WriteLine("Tady je tvé hrací pole naplň si ho");
+                Console.ReadKey();
+                HraciPole h2 = new HraciPole();
+                h1.NaplnPole();
 
-            Console.Write("Tým 1 - Hráč 1: ");
-            string t1p1 = Console.ReadLine();
-            char[,] t1a1=new char[10, 10];
-            HraciPole t1h1 = new HraciPole(t1a1);
-            t1h1.NaplnPole();
-            Console.Write("Tým 1 - Hráč 2: ");
-                
-            string t1p2 = Console.ReadLine();
+                Console.Write("Tým 2 - Hráč 1: ");
+                string t2p1 = Console.ReadLine();
+                Console.WriteLine("Tady je tvé hrací pole naplň si ho");
+                Console.ReadKey();
+                HraciPole h3 = new HraciPole();
+                h1.NaplnPole();
 
-            Console.Write("Tým 2 - Hráč 1: ");
-            string t2p1 = Console.ReadLine();
-
-            Console.Write("Tým 2 - Hráč 2: ");
-            string t2p2 = Console.ReadLine();
+                Console.Write("Tým 2 - Hráč 2: ");
+                string t2p2 = Console.ReadLine();
+                Console.WriteLine("Tady je tvé hrací pole naplň si ho");
+                Console.ReadKey();
+                HraciPole h4 = new HraciPole();
+                h1.NaplnPole();
             
             Console.WriteLine($"\nTýmy připraveny!");
             Console.WriteLine($"{t1p1} a {t1p2}  VS  {t2p1} a {t2p2}");

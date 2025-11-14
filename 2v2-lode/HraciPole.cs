@@ -165,14 +165,14 @@ public class HraciPole
         {
             for (int i = 0; i < velikost; i++)
             {
-                pole[x + i, y] = 'L';
+                pole[x + i, y] = 'l';
             }
         }
         else
         {
             for (int i = 0; i < velikost; i++)
             {
-                pole[x, y + i] = 'L';
+                pole[x, y + i] = 'l';
             }
         }
     }
