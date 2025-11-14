@@ -32,13 +32,12 @@ public class HraciPole
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.BackgroundColor = ConsoleColor.Gray;
                         break;
-                    default:
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        break;
                 }
 
-                Console.Write(pole[i, j]);
+                Console.Write(pole[i, j] + ' ');
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.Write("  ");
             }
 
             Console.WriteLine();
