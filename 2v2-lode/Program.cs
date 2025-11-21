@@ -154,6 +154,9 @@
         }
 
         Console.WriteLine($"\n{aktivniJmeno} střílí na: {cilJmeno}");
+        Console.WriteLine($"\nZobrazuji pole hráče {cilJmeno}:");
+        cil.VypisPole(true);   // ukáže pole soupeře, ale bez lodí
+        Console.WriteLine("\nZadej souřadnice, kam chceš střílet:");
         bool platnyTah = cil.Strilej();
 
         // Zkontroluj, zda některý tým neprohrál
