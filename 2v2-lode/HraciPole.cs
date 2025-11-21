@@ -98,10 +98,16 @@ namespace _2v2_lode;
 
                 // --- Zadej pozici a směr ---
                 Console.Write("Zadej X souřadnici (0 - " + (pole.GetLength(0) - 1) + "): ");
-                x = int.Parse(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out x))
+                {
+                    Console.WriteLine("Zadej platnou souřadnici X (0 - " + (pole.GetLength(0) - 1) + "): ");
+                }
 
                 Console.Write("Zadej Y souřadnici (0 - " + (pole.GetLength(1) - 1) + "): ");
-                y = int.Parse(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out y))
+                {
+                    Console.WriteLine("Zadej platnou souřadnici Y (0 - " + (pole.GetLength(1) - 1) + "): ");
+                }
 
                 if (velikost > 1)
                 {
