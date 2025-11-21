@@ -28,7 +28,7 @@ Hra končí, jakmile **jeden tým přijde o obě hrací pole** (tj. oběma hrá�
   - zobrazí se mu **skryté pole soupeře** (lodě nejsou vidět),
   - zadá souřadnice výstřelu.
 - Zásah se označí **p**, minula **m**.
-- Každý hráč má vlastní sadu lodí (nejsou sdílené mezi týmem).
+- Každý hráč má vlastní sadu lodí (nejsou sdílené v týmu).
 - Tým prohrává, když **oba jeho hráči mají zničeny všechny lodě**.
 
 ---
@@ -46,12 +46,8 @@ Hra se ovládá pomocí textových vstupů do konzole.
 ### Při hře:
 - Vyber hráče, na kterého chceš střílet (1 nebo 2)
 - Zadej X a Y souřadnici výstřelu
-- Pole soupeře se zobrazí v režimu, kde **nejsou vidět neodhalené lodě**
+- Pole soupeře se zobrazí v režimu, kde **nejsou vidět jeho lodě**
 
-_(Klávesy W, A, S, D, E nejsou součástí této hry — nechal jsem je pouze z tvého zadání.  
-Pokud je chceš odstranit nebo nahradit, jen řekni.)_
-
----
 
 ## Struktura programu
 
@@ -77,4 +73,4 @@ Obsahuje:
 _Matěj pracoval na menu a pokládání lodí. Matyáš pracoval na střelbě. Na vypisování pole jsem spolupracovali._
 
 ## Známé problémy / omezení
-_O žádných nevíme!_
+_O žádných nevíme a doufáme, že nejsou!_
