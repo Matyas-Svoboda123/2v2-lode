@@ -51,7 +51,6 @@
                 Console.ReadKey();
                 HraciPole h1 = new HraciPole();
                 h1.NaplnPole();
-            
                 Console.Write("Tým 1 - Hráč 2: ");
                 string t1p2 = Console.ReadLine();
                 Console.WriteLine("Tady je tvé hrací pole naplň si ho");
