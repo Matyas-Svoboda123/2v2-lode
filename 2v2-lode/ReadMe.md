@@ -27,7 +27,7 @@ Hra končí, jakmile **jeden tým přijde o obě hrací pole** (tj. oběma hrá�
   - vybere hráče soupeřova týmu, na kterého chce střílet,
   - zobrazí se mu **skryté pole soupeře** (lodě nejsou vidět),
   - zadá souřadnice výstřelu.
-- Zásah se označí **p**, minela **m**.
+- Zásah se označí **p**, minula **m**.
 - Každý hráč má vlastní sadu lodí (nejsou sdílené mezi týmem).
 - Tým prohrává, když **oba jeho hráči mají zničeny všechny lodě**.
 
