@@ -7,6 +7,7 @@ namespace _2v2_lode;
 public class HraciPole
 {
     public char[,] pole = new char[10, 10];
+    public int ZbyleLode = 20; 
 
     public void VypisPole()
     {
@@ -177,19 +178,16 @@ public class HraciPole
         }
     }
     
-    public void Strilej()
+    public bool Strilej()
     {
-        Console.Clear();
-        Console.WriteLine("--- Střela na hrací pole ---");
-        VypisPole(); // Zobrazíme pole před střelou
-
+        // Upozornění: int.Parse bez try/catch může způsobit pád, pokud uživatel zadá text
         Console.Write("Zadej X souřadnici (0 - " + (pole.GetLength(0) - 1) + "): ");
         int x = int.Parse(Console.ReadLine());
 
         Console.Write("Zadej Y souřadnici (0 - " + (pole.GetLength(1) - 1) + "): ");
         int y = int.Parse(Console.ReadLine());
         
-        // Jednoduchá kontrola mezí (bez return false v if)
+        // Kontrola mezí (bez return false v if)
         bool vMezich = true;
         if (x < 0) vMezich = false;
         if (x >= pole.GetLength(0)) vMezich = false;
@@ -199,33 +197,35 @@ public class HraciPole
 
         if (!vMezich)
         {
-            Console.WriteLine("\nStřela je mimo hrací pole! Pokus ztracen.");
+            Console.WriteLine("\nStřela je mimo hrací pole! Zkus to znovu.");
+            Console.ReadKey();
+            return false; // Nepočítá se jako platný tah
         }
-        else
+        
+        char cil = pole[x, y];
+        if (cil == 'v') // Voda - Miss
         {
-            // Vyhodnocení střely
-            char cil = pole[x, y];
-
-            if (cil == 'v') // Voda - Miss
-            {
-                pole[x, y] = 'm';
-                Console.WriteLine("\n[VEDLE] Střela minula cíl (Voda).");
-            }
-            else if (cil == 'l') // Loď - Hit
-            {
-                pole[x, y] = 'p';
-                Console.WriteLine("\n[ZÁSAH] Trefil jsi loď!");
-            }
-            else // Už trefeno nebo minuto
-            {
-                Console.WriteLine("\n[UPOZORNĚNÍ] Už jsi střílel na toto místo. Pokus ztracen.");
-            }
+            pole[x, y] = 'm';
+            Console.WriteLine("\n[VEDLE] Střela minula cíl (Voda).");
+        }
+        else if (cil == 'l') // Loď - Hit
+        {
+            pole[x, y] = 'p';
+            ZbyleLode--; // Upraveno: Používá ZbyleLode přímo místo this.ZbyleLode
+            Console.WriteLine("\n[ZÁSAH] Trefil jsi loď!");
+        }
+        else // Už trefeno nebo minuto
+        {
+            Console.WriteLine("\n[UPOZORNĚNÍ] Už jsi střílel na toto místo. Zkus to znovu.");
+            Console.ReadKey();
+            return false; // Nepočítá se jako platný tah
         }
 
         Console.WriteLine("\nStav pole po střele:");
-        VypisPole(); // Zobrazíme pole po střele
+        VypisPole(); 
 
-        Console.WriteLine("\nStiskněte libovolnou klávesu pro pokračování...");
+        Console.WriteLine("\nStiskni libovolnou klávesu pro pokračování...");
         Console.ReadKey();
+        return true; // Platný tah
     }
 }
