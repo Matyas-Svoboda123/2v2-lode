@@ -47,6 +47,7 @@
     Console.WriteLine("Zadejte jména hráčů:");
 
     // --- Tým 1 ---
+    Console.Clear();
     Console.Write("Tým 1 - Hráč 1: ");
     string t1p1 = Console.ReadLine();
     Console.WriteLine("Tady je tvé hrací pole, naplň si ho");
@@ -54,6 +55,7 @@
     HraciPole t1p1_pole = new HraciPole();
     t1p1_pole.NaplnPole();
 
+    Console.Clear();
     Console.Write("Tým 1 - Hráč 2: ");
     string t1p2 = Console.ReadLine();
     Console.WriteLine("Tady je tvé hrací pole, naplň si ho");
@@ -62,6 +64,7 @@
     t1p2_pole.NaplnPole();
 
     // --- Tým 2 ---
+    Console.Clear();
     Console.Write("Tým 2 - Hráč 1: ");
     string t2p1 = Console.ReadLine();
     Console.WriteLine("Tady je tvé hrací pole, naplň si ho");
@@ -69,6 +72,7 @@
     HraciPole t2p1_pole = new HraciPole();
     t2p1_pole.NaplnPole();
 
+    Console.Clear();
     Console.Write("Tým 2 - Hráč 2: ");
     string t2p2 = Console.ReadLine();
     Console.WriteLine("Tady je tvé hrací pole, naplň si ho");
@@ -162,12 +166,14 @@
         // Zkontroluj, zda některý tým neprohrál
         if (t1p1_pole.ZbyleLode == 0 && t1p2_pole.ZbyleLode == 0)
         {
+            Console.Clear();
             Console.WriteLine("\n=== Tým 2 VYHRÁVÁ! ===");
             Console.ReadKey();
             return;
         }
         if (t2p1_pole.ZbyleLode == 0 && t2p2_pole.ZbyleLode == 0)
         {
+            Console.Clear();
             Console.WriteLine("\n=== Tým 1 VYHRÁVÁ! ===");
             Console.ReadKey();
             return;
