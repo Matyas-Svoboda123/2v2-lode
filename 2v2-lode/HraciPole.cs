@@ -185,12 +185,20 @@ namespace _2v2_lode;
 
         public bool Strilej()
         {
+            int x;
+            int y;
             // Upozornění: int.Parse bez try/catch může způsobit pád, pokud uživatel zadá text
             Console.Write("Zadej X souřadnici (0 - " + (pole.GetLength(0) - 1) + "): ");
-            int x = int.Parse(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out x))
+            {
+                Console.WriteLine("Zadej platnou souřadnici X (0 - " + (pole.GetLength(0) - 1) + "): ");
+            }
 
             Console.Write("Zadej Y souřadnici (0 - " + (pole.GetLength(1) - 1) + "): ");
-            int y = int.Parse(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out y))
+            {
+                Console.WriteLine("Zadej platnou souřadnici Y (0 - " + (pole.GetLength(1) - 1) + "): ");
+            }
 
             // Kontrola mezí (bez return false v if)
             bool vMezich = true;
