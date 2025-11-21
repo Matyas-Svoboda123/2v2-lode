@@ -6,7 +6,7 @@
         {
             int volba = -1;
 
-            while (volba != 0)
+            while (volba != 3)
             {
                 Console.Clear();
                 Console.WriteLine("=================================");

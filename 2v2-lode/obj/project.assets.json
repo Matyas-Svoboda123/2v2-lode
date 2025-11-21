@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\mates\\.nuget\\packages\\": {}
+    "C:\\Users\\matys\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mates\\Desktop\\škola\\2\\programovaní\\projekt\\2v2-lode\\2v2-lode\\2v2-lode.csproj",
+      "projectUniqueName": "C:\\Users\\matys\\RiderProjects\\2v2-lode\\2v2-lode\\2v2-lode.csproj",
       "projectName": "2v2-lode",
-      "projectPath": "C:\\Users\\mates\\Desktop\\škola\\2\\programovaní\\projekt\\2v2-lode\\2v2-lode\\2v2-lode.csproj",
-      "packagesPath": "C:\\Users\\mates\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mates\\Desktop\\škola\\2\\programovaní\\projekt\\2v2-lode\\2v2-lode\\obj\\",
+      "projectPath": "C:\\Users\\matys\\RiderProjects\\2v2-lode\\2v2-lode\\2v2-lode.csproj",
+      "packagesPath": "C:\\Users\\matys\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matys\\RiderProjects\\2v2-lode\\2v2-lode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mates\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\matys\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\mates\\.dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\matys\\.dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

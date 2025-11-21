@@ -9,7 +9,7 @@ namespace _2v2_lode;
         public char[,] pole = new char[10, 10];
         public int ZbyleLode = 20;
 
-        public void VypisPole(bool skryte = true)
+        public void VypisPole(bool skryte)
         {
             for (int i = 0; i < pole.GetLength(0); i++)
             {
@@ -38,6 +38,10 @@ namespace _2v2_lode;
                         case 'm':
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.BackgroundColor = ConsoleColor.White;
+                            break;
+                        case 'l':
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.BackgroundColor = ConsoleColor.Gray;
                             break;
                     }
 
@@ -72,7 +76,7 @@ namespace _2v2_lode;
             while (l1 > 0 || l2 > 0 || l3 > 0 || l4 > 0)
             {
                 Console.Clear();
-                VypisPole();
+                VypisPole(false);
 
                 Console.WriteLine("\nJakou loď chceš položit? (1–4)");
                 Console.WriteLine($"Loď(1): {l1}, Loď(2): {l2}, Loď(3): {l3}, Loď(4): {l4}");
@@ -145,7 +149,7 @@ namespace _2v2_lode;
 
             Console.Clear();
             Console.WriteLine("Všechny lodě byly úspěšně položeny!");
-            VypisPole();
+            VypisPole(false);
         }
 
         private bool MuzePolozit(int x, int y, int velikost, char smer)
@@ -241,7 +245,7 @@ namespace _2v2_lode;
             }
 
             Console.WriteLine("\nStav pole po střele:");
-            VypisPole();
+            VypisPole(true);
 
             Console.WriteLine("\nStiskni libovolnou klávesu pro pokračování...");
             Console.ReadKey();
