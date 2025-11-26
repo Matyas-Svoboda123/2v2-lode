@@ -123,7 +123,7 @@ namespace _2v2_lode;
                     smer = 'h'; // pro velikost 1 směr neřešíme
                 }
 
-                // --- Ověření, zda může být loď položena ---
+                //Ověření, zda může být loď položena
                 if (!MuzePolozit(x, y, velikost, smer))
                 {
                     Console.WriteLine("Nelze umístit loď – mimo pole nebo koliduje s jinou lodí!");
@@ -131,11 +131,11 @@ namespace _2v2_lode;
                     continue;
                 }
 
-                // --- Umístění lodi ---
+                //Umístění lodi
                 PolozeniLodi(x, y, velikost, smer);
                 Console.WriteLine("Loď položena!");
 
-                // --- Snížení počtu dostupných lodí ---
+                //Snížení počtu dostupných lodí
                 switch (velikost)
                 {
                     case 1: l1--; break;
@@ -197,7 +197,6 @@ namespace _2v2_lode;
         {
             int x;
             int y;
-            // Upozornění: int.Parse bez try/catch může způsobit pád, pokud uživatel zadá text
             Console.Write("Zadej X souřadnici (0 - " + (pole.GetLength(0) - 1) + "): ");
             while (!int.TryParse(Console.ReadLine(), out x))
             {
@@ -210,7 +209,7 @@ namespace _2v2_lode;
                 Console.WriteLine("Zadej platnou souřadnici Y (0 - " + (pole.GetLength(1) - 1) + "): ");
             }
 
-            // Kontrola mezí (bez return false v if)
+            // Kontrola mezí
             bool vMezich = true;
             if (x < 0) vMezich = false;
             if (x >= pole.GetLength(0)) vMezich = false;
@@ -234,7 +233,7 @@ namespace _2v2_lode;
             else if (cil == 'l') // Loď - Hit
             {
                 pole[x, y] = 'p';
-                ZbyleLode--; // Upraveno: Používá ZbyleLode přímo místo this.ZbyleLode
+                ZbyleLode--;
                 Console.WriteLine("\n[ZÁSAH] Trefil jsi loď!");
             }
             else // Už trefeno nebo minuto

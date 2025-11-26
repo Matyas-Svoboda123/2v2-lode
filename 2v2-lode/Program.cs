@@ -86,8 +86,7 @@
     Console.WriteLine($"{t1p1} a {t1p2}  VS  {t2p1} a {t2p2}");
     Console.WriteLine("\nStiskni libovolnou klávesu pro start hry...");
     Console.ReadKey();
-
-    // ====== HERNÍ SMYČKA ======
+    
     int tah = 0;
 
     while (true)
